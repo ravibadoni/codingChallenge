@@ -1,0 +1,21 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>
+      <i class="fa fa-bath" aria-hidden="true"></i>
+      Coding Challenge
+    </h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 text-center">
+    <div class="col-md-6 pull-left">
+    <button routerLink="/users" style="margin-right: 10px" id="btnSearch" class="btn btn-primary btn-md center-block">Users Management</button>
+      <button routerLink="/add-user" id="btnSearch" class="btn btn-primary btn-md center-block">Add User</button>
+    </div>
+    <div class="col-md-6 pull-right">
+    <button routerLink="/jobs" style="margin-right: 10px" id="btnClear" class="btn btn-danger btn-md center-block">Jobs Management</button>
+      <button routerLink="/add-jobs" id="btnClear" class="btn btn-danger btn-md center-block">Add Job</button>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

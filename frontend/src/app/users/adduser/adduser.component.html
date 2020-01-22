@@ -1,0 +1,41 @@
+<div class="container">
+  <h2>Add Users</h2>
+  <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input formControlName="name" type="text" class="form-control" placeholder="Enter Name">
+      <div class="error-msg" *ngIf="addUserForm.controls['name'].errors">
+        name is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="dob">Enter DOB in MM/dd/yyyy</label>
+      <input formControlName="dateOfBirth" type="text" class="form-control"  placeholder="Enter DOB">
+      <div class="error-msg" *ngIf="addUserForm.controls['dateOfBirth'].errors">
+        dateOfBirth is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input formControlName="email" type="email" class="form-control" placeholder="Enter email">
+      <div class="error-msg" *ngIf="addUserForm.controls['email'].errors">
+        email is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="status">Status</label>
+      <input formControlName="status" type="text" class="form-control"  placeholder="Enter Status">
+      <div class="error-msg" *ngIf="addUserForm.controls['status'].errors">
+        status is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="hrate">Hourly rate</label>
+      <input formControlName="hourlyRate" type="number" class="form-control"placeholder="Enter Hourly Rate">
+      <div class="error-msg" *ngIf="addUserForm.controls['hourlyRate'].errors">
+        This Field is required.
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

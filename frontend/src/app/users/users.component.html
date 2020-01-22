@@ -1,0 +1,28 @@
+<h1>Users List</h1>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Status</th>
+    <th scope="col">Email</th>
+    <th scope="col">Hourly rate</th>
+    <th scope="col">D.O.B</th>
+    <th scope="col">Actions</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of usersList; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>
+      {{ user.name }}
+    </td>
+    <td>{{ user.status }}</td>
+    <td>{{ user.email  }}</td>
+    <td>{{ user.hourlyRate  }}</td>
+    <td>{{ user.dateOfBirth | date  }}</td>
+    <td (click)="deleteRecord(user.id)">Delete</td>
+  </tr>
+  </tbody>
+</table>
